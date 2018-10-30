@@ -1,0 +1,96 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.ng-valid[required], .ng-valid.required  {
+   border-left: 5px solid #42A948;
+   border-right: 1px solid#42A948;
+   border-top: 1px solid #42A948;
+   border-bottom: 1px solid #42A948;
+  
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442;
+    border-right: 1px solid #a94442;
+    border-top: 1px solid #a94442;
+     border-bottom: 1px solid #a94442;
+}
+
+ .form-group {
+  min-height:100px
+} 
+
+.invalid-feedback{
+    margin-left: 15px;
+    color: red
+}
+
+.bg {
+  background-color: rgb( 0, 184, 226 );
+  min-height:200px; 
+}
+
+ #formEmployee input,button{
+   margin: 10px;
+  }
+
+ #formEmployee h1,h6{
+  line-height: 1.333;
+  text-align: center;
+  font-family: "Arial";
+  color: rgb( 255, 255, 255 );
+}
+
+#formEmployee .fonte-header {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+ #formEmployee .botao-arrendodado {
+  border-radius: 2px;
+  background-color: rgb( 255, 255, 255 );
+  width: 297px;
+  height: 55px;
+}
+
+  #formEmployee .botao-submit {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb( 255, 255, 255 );
+  background-color:  rgb( 0, 184, 226 );
+  width: 156px;
+  height: 54px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb( 255, 255, 255 );;
+}
+
+ #formEmployee .botao-submit:hover { background-color: rgb( 16, 66, 134 );}
+ #formEmployee .botao-submit:active { transform: translateY(4px);}
+
+/* ------------------------- Section below the form -------------------------------------*/
+
+ #informationsSection h1{
+  margin-top: 50px;
+}
+
+ #informationsSection h1{
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#informationsSection p{
+  text-align: center;
+}
+
+#informationsSection #tableInfo{
+    margin-top: 50px;
+}
+#informationsSection #doughnutInfo{
+    margin-top: 50px;
+}

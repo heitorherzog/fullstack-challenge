@@ -1,0 +1,75 @@
+<div class="container-fluid bg" id="formEmployee">
+  <div class="container">
+    <h1 class="fonte-header">Cadastre-se</h1>
+    <h6 class="fonte-loreepsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h6>
+
+    <form (ngSubmit)="onSubmit(employeeForm);" #employeeForm="ngForm" class="form-inline">
+
+      <div class="form-group lg-3 mb-12">
+        <input placeholder="Nome" type="text" class="form-control botao-arrendodado" id="name" required [(ngModel)]="employee.name"
+          name="name" #name="ngModel">
+
+        <div [hidden]="name.valid || name.pristine" class="invalid-feedback">
+          <span>Insira um nome</span>
+        </div>
+
+      </div>
+
+
+      <div class="form-group lg-3 mb-12">
+        <input placeholder="Sobrenome" type="text" class="form-control botao-arrendodado" id="surName" required
+          [(ngModel)]="employee.surName" name="surName" #surName="ngModel">
+
+        <div [hidden]="surName.valid || surName.pristine" class="invalid-feedback">
+           <span>Insira um sobrenome </span>
+        </div>
+
+      </div>
+
+      <div class="form-group lg-3 mb-12">
+        <input placeholder="Participação" type="number" class="form-control botao-arrendodado" id="participation" required
+          [(ngModel)]="employee.participation" name="participation" #participation="ngModel">
+
+            <div [hidden]="participation.valid || participation.pristine" class="invalid-feedback">
+              <span>Insira uma participação</span>
+            </div>
+
+      </div>
+
+      <div class="form-group lg-3 mb-12">
+        <!-- <button type="submit" class="btn btn-default botao-submit">Enviar </button> -->
+        <button type="submit" class="btn btn-default botao-submit" [disabled]="!employeeForm.form.valid">Enviar
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div [hidden]="!loaded">
+  <div class="container" id="informationsSection">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Dados</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <!-- tableInfo-->
+        <div id="tableInfo">
+          <app-table-employees [employees]="employees"> </app-table-employees>
+
+        </div>
+        <!-- tableInfo -->
+      </div>
+      <div class="col-sm-6">
+        <!-- app-doughnut-chart -->
+        <div id="doughnutInfo">
+          <app-doughnut-chart [employees]="employees"></app-doughnut-chart>
+        </div>
+        <!-- app-doughnut-chart -->
+      </div>
+    </div>
+  </div>
+</div>

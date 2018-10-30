@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>Participação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees; let i=index">
+      <td>{{i + 1}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.surName}}</td>
+      <td>{{employee.participation}}%</td>
+    </tr>
+
+  </tbody>
+</table>
